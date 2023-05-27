@@ -3,10 +3,10 @@ name: Jenkins Unit Testing
 on: 
     pull_request:
         branches:
-            - main
+            - master
     push:
         branches:
-            - main
+            - master
 
 concurrency:
     group: unit-test
