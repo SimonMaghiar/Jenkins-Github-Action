@@ -1,0 +1,22 @@
+name: Jenkins Unit Testing
+
+on: 
+    pull_request:
+        branches:
+            - main
+    push:
+        branches:
+            - main
+
+concurrency:
+    group: unit-test
+
+jobs:
+    Jenkins-Unit-Testing:
+        runs-on: ubuntu-latest
+        timeout-minutes: 30
+        steps:
+            - uses: FranzDiebold/github-env-vars-action@v2
+            - name: Variables
+              run: |
+                echo "$CI_HEAD_REF"
