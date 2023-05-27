@@ -23,7 +23,7 @@ jobs:
             - name: Print
               run: echo ${{ env.CI_ACTION_REF_NAME }}
             - name: Trigger-build
-              uses: simon/jenkins-trigger@main
+              uses: SimonMaghiar/jenkins-trigger@main
               with:
                 url: ${{ secrets.JENKINS_URL }}
                 user_name: ${{ secrets.JENKINS_USER }}
