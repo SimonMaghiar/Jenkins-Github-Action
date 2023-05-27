@@ -20,3 +20,5 @@ jobs:
             - name: Variables
               run: |
                 echo "$CI_HEAD_REF"
+            - name: Print
+              run: echo ${{ env.CI_ACTION_REF_NAME }}
