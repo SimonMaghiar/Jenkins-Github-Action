@@ -22,3 +22,5 @@ jobs:
                 echo "$CI_HEAD_REF"
             - name: Print
               run: echo ${{ env.CI_ACTION_REF_NAME }}
+            - name: Trigger-build
+              run: echo ${{ secrets.JENKINS_URL }}
